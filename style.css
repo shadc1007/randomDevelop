@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    background: #0cebeb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header, .flex-container2 {
+    font-size: 2rem;
+    min-height: 10vh;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.flex-container1, .flex-container1-result, .resultDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid black;
+}
+.resultDiv {
+    border: none;
+}
+
+.flex-container1 > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+#green:hover, #red:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+#green {
+    background-color: rgb(97, 240, 97);
+    border-radius: 3px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#red {
+    background-color: rgb(233, 57, 57);
+    border-radius: 3px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.h1-el {
+    font-size: 2.3rem;
+}
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.wrapper {
+    width: 605px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+}
+.wrapper .header {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.wrapper .quote-area {
+    display: flex;
+    justify-content: center;
+}
+.quote-area .quote-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.quote-author {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.features button {
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+}
+.features i {
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.features button:hover, .features i:hover {
+    box-shadow: 0px 0px 5px black;
+}
