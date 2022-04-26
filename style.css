@@ -14,7 +14,7 @@ body {
     background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-header, .flex-container2 {
+header, .flex-container2, .flex-container3 {
     font-size: 2rem;
     min-height: 10vh;
     text-align: center;
@@ -22,7 +22,7 @@ header, .flex-container2 {
     border: 1px solid black;
 }
 
-.flex-container1, .flex-container1-result, .resultDiv{
+.flex-container1, .flex-container1-result, .resultDiv, .cat-image, .cat-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -33,7 +33,7 @@ header, .flex-container2 {
     border: none;
 }
 
-.flex-container1 > div{
+.flex-container1 > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +44,7 @@ header, .flex-container2 {
     box-shadow: 0px 0px 5px black;
 }
 
-#green {
+#green, #genCat{
     background-color: rgb(97, 240, 97);
     border-radius: 3px;
     padding: 1rem;
@@ -54,7 +54,7 @@ header, .flex-container2 {
     font-weight: bold;
     cursor: pointer;
 }
-#red {
+#red, #resetCat{
     background-color: rgb(233, 57, 57);
     border-radius: 3px;
     padding: 1rem;
@@ -124,4 +124,11 @@ header, .flex-container2 {
 }
 .features button:hover, .features i:hover {
     box-shadow: 0px 0px 5px black;
+}
+.cat-image {
+    flex-wrap: wrap;
+}
+.image-OfCat {
+    height: 15rem;
+    width: 15rem;
 }

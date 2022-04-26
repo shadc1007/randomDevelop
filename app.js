@@ -6,13 +6,17 @@ const quoteText = document.querySelector(".quote-text");
 const quoteAuthor = document.querySelector(".quote-author");
 const quoteButton = document.querySelector(".new-quote");
 const soundsBtn = document.querySelector("#sounds");
+const genCat = document.querySelector("#genCat");
+const resetCat = document.querySelector("#resetCat");
+const catDiv = document.querySelector(".cat-image");
 
 // Event listeners 
 greenButton.addEventListener('click', buttonFun);
 redButton.addEventListener('click', removeBtn);
 quoteButton.addEventListener('click', newQuote);
 soundsBtn.addEventListener('click', soundsFun);
-
+genCat.addEventListener('click', generateCat);
+resetCat.addEventListener('click', removeCat);
 
 // function 
 function buttonFun() {
@@ -53,4 +57,28 @@ function newQuote() {
 function soundsFun() {
     let utterance = new SpeechSynthesisUtterance(`${quoteText.textContent}`);
     speechSynthesis.speak(utterance);
+};
+
+// Function generate cat and api
+function generateCat() {
+    catDiv.innerHTML = '';
+
+    fetch ("https://api.thecatapi.com/v1/images/search")
+    .then(response => response.json())
+    .then(result =>{
+        const catImg = result[0].url;
+        // Create image element
+        const imageEl = document.createElement('img');
+        imageEl.src = catImg;
+        imageEl.classList.add("image-ofCat");
+         
+        catDiv.appendChild(imageEl);
+ 
+    })
+};
+
+// Reset Cat / remove cat image
+function removeCat() {
+    catDiv.removeChild(catDiv.firstElementChild);
+
 }
